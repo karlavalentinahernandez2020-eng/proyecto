@@ -39,14 +39,15 @@ class PostManager:
 if __name__ == "__main__":
     manager = PostManager()
 
-post_obtenido = manager.obtener_post(1)
+    # --- GET ---
+    post_obtenido = manager.obtener_post(1)
     print("--- GET ---")
     print("Post obtenido:", post_obtenido["title"])
     print()
 
-     # --- POST ---
+    # --- POST ---
     nuevo_post = manager.crear_post(
-        "Nuevo Titulo", 
+        "primer post", 
         "Contenido del post", 
         1
     )
@@ -68,14 +69,5 @@ post_obtenido = manager.obtener_post(1)
     print("--- DELETE ---")
     print("Post eliminado:", eliminado)
 
-    # --- GET ---
-    
-
-    # --- POST ---
    
-
-    
-    
-
-    # --- DELETE ---
-    
+  
