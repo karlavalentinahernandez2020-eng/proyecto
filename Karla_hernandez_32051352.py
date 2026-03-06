@@ -39,26 +39,43 @@ class PostManager:
 if __name__ == "__main__":
     manager = PostManager()
 
-    # --- GET ---
-    post_recuperado = manager.obtener_post(1)
+post_obtenido = manager.obtener_post(1)
     print("--- GET ---")
-    print(f"Post obtenido: {post_recuperado['title']}")
+    print("Post obtenido:", post_obtenido["title"])
     print()
 
-    # --- POST ---
-    nuevo_post = manager.crear_post("Prueba", "Contenido", 1)
+     # --- POST ---
+    nuevo_post = manager.crear_post(
+        "Nuevo Titulo", 
+        "Contenido del post", 
+        1
+    )
     print("--- POST ---")
-    print(f"Post creado ID: {nuevo_post['id']}")
+    print("Post creado ID:", nuevo_post["id"])
     print()
 
     # --- PATCH ---
-    post_editado = manager.actualizar_parcial(1, title="Título Actualizado")
+    post_actualizado = manager.actualizar_parcial(
+        1, 
+        title="Título Actualizado"
+    )
     print("--- PATCH ---")
-    print(f"Post actualizado: {post_editado['title']}")
+    print("Post actualizado:", post_actualizado["title"])
     print()
 
     # --- DELETE ---
-    eliminado_exitoso = manager.eliminar_post(1)
+    eliminado = manager.eliminar_post(1)
     print("--- DELETE ---")
-    print(f"Post eliminado: {eliminado_exitoso}")
+    print("Post eliminado:", eliminado)
 
+    # --- GET ---
+    
+
+    # --- POST ---
+   
+
+    
+    
+
+    # --- DELETE ---
+    
